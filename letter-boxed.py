@@ -86,7 +86,7 @@ def main():
 
 	# Find solutions, starting with depth of 1 (single word) and increasing allowed sequence length
 	print('sides: %s' % (sides))
-	for max_depth in range(1,3):
+	for max_depth in range(1,4):
 		print('checking for %i-word solutions' % (max_depth))
 		valid_sequences = []
 		for word in matching_words:
@@ -94,6 +94,8 @@ def main():
 		print('  found %i solutions' % (len(valid_sequences)))
 		for sequence in valid_sequences:
 			print('    %s' % (sequence))
+		if valid_sequences:
+			return
 
 if __name__ == "__main__":
     main()
