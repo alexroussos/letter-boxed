@@ -1,6 +1,16 @@
 # spelling-bee
 Solve the NYTimes Letter Boxed puzzle https://www.nytimes.com/puzzles/letter-boxed
 
+This works for any n-sided puzzle with any number of letters on a side, although the NYTimes puzzles seem to always be 4 sides of 3 letters each.
+
+## Algorithm
+1. Filter the dictionary for words that satisfy the specified groups of letters ('sides') and adjacency rules
+2. For each of the valid dictionary words, do a depth-first search, recursively adding each possible next word to the sequence
+  - Next words must begin with the last letter of the previous word; use a dictionary of `first_letter --> [words]` to make this efficient 
+  - Begin with a max depth of 1 (ie single-word solutions to the puzzle), then increase depth until solutions are found. This is effectively a breadth-first search, albeit one that discards work from the previous step; if going deeper than ~3 levels with the standard 4-sides-of-3-letters puzzle, this should be reimplemented as breadth-first search
+3. If a valid solution is found, ie a sequence of words that uses all letters in the puzzle, add it to the list
+4. Print solutions for that depth and increase the allowed sequence length if none were found
+
 ## Setup
 Install Python 3.x 
 
