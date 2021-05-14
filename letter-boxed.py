@@ -77,7 +77,7 @@ def add_word_to_sequence(word, sequence, all_letters, valid_sequences, max_depth
 
 def main():
 	# Pre-process / build all the helper data structures
-	sides = args['side']
+	sides = [s.lower() for s in args['side']]
 	words = open(args['word_file'], 'r').readlines()
 	matching_words = find_matching_words(words, sides)
 	words_by_first_char = get_words_by_first_char(matching_words)
