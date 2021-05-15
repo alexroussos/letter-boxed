@@ -71,7 +71,7 @@ def add_word_to_sequence(word, sequence, all_letters, valid_sequences, max_depth
 	elif len(sequence) >= max_depth:
 		return
 	else:
-		next_words = words_by_first_char.get(last_char)
+		next_words = words_by_first_char.get(last_char) or []
 		for next_word in next_words:
 			add_word_to_sequence(next_word, sequence.copy(), remaining_letters, valid_sequences, max_depth, words_by_first_char)
 
