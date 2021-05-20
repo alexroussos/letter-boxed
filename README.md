@@ -1,4 +1,4 @@
-# spelling-bee
+# Letter Boxed Solver
 Solve the NYTimes Letter Boxed puzzle https://www.nytimes.com/puzzles/letter-boxed
 
 This works for any n-sided puzzle with any number of letters on a side, although the NYTimes puzzles seem to always be 4 sides of 3 letters each.
