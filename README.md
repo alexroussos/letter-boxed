@@ -3,6 +3,8 @@ Solve the NYTimes Letter Boxed puzzle https://www.nytimes.com/puzzles/letter-box
 
 This works for any n-sided puzzle with any number of letters on a side, although the NYTimes puzzles seem to always be 4 sides of 3 letters each.
 
+Live solver https://puzzles.roussos.world/ 
+
 ## Algorithm
 1. Filter the dictionary for words that satisfy the specified groups of letters ('sides') and adjacency rules
 2. For each of the valid dictionary words, do a depth-first search, recursively adding each possible next word to the sequence
