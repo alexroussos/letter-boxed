@@ -1,11 +1,11 @@
 # Letter Boxed Solver
-Solve the NYTimes Letter Boxed puzzle https://www.nytimes.com/puzzles/letter-boxed
+Solve the NYTimes [Letter Boxed](https://www.nytimes.com/puzzles/letter-boxed) puzzle 
 
-This works for any n-sided puzzle with any number of letters on a side, although the NYTimes puzzles seem to always be 4 sides of 3 letters each.
-
-Live solver https://puzzles.roussos.world/ 
+**See it in action** https://puzzles.roussos.world/
 
 ## Algorithm
+This works for any n-sided puzzle with any number of letters on a side, although the NYTimes puzzles seem to always be 4 sides of 3 letters each.
+
 1. Filter the dictionary for words that satisfy the specified groups of letters ('sides') and adjacency rules
 2. For each of the valid dictionary words, do a depth-first search, recursively adding each possible next word to the sequence
   - Next words must begin with the last letter of the previous word; use a dictionary of `first_letter --> [words]` to make this efficient 
